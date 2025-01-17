@@ -1,0 +1,1271 @@
+@font-face {
+    font-family: "Kia-regular";
+    src: url('../font/TTF/KiaSignatureFixRegular.ttf')
+}
+
+@font-face {
+    font-family: 'kia-light';
+    src: url('../font/TTF/KiaSignatureFixLight.ttf')
+}
+
+@font-face {
+    font-family: 'kia-bold';
+    src: url('../font/TTF/KiaSignatureFixBold.ttf')
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black-solid: #000000;
+    --Color-Kia-Black: #000000;
+    --Color-Kia-Alto: #D9D9D9;
+    --color-grey-85: #D9D9D9;
+    --color-white-solid: #FFFFFF;
+    --Color-Kia-White: #FFFFFF;
+    --Color-Kia-Cod-Gray: #111111;
+
+
+
+    --font-weight-600: 600;
+    --font-weight-400: 400;
+
+    --line-height-21: 21px;
+    --line-height-48: 48px;
+    --letter-spacing-0_16: 16;
+
+    --stroke-weight-1: 1;
+
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-26: 26px;
+    --font-size-32: 32px;
+
+}
+
+.header {
+    position: relative;
+}
+
+.header nav {
+    position: absolute;
+    width: 100%;
+    top: 18px;
+    z-index: 11;
+    mix-blend-mode: difference;
+}
+
+.header nav .container {
+    background-color: var(--Color-Kia-Alto);
+    padding: 16px;
+}
+
+.header nav .navbar-toggler{
+    padding: 0;
+    border: 0;
+}
+
+.header nav .navbar-toggler img{
+    max-width: 38px;
+}
+
+.header nav .navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.header nav .book-btn {
+    background-color: var(--color-black-solid);
+    text-decoration: none;
+    padding: 16px 27px;
+
+    color: var(--Color-Kia-Alto, var(--color-grey-85, #D9D9D9));
+    text-align: center;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.10);
+    font-family: 'kia-regular';
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-21, 21px);
+}
+
+.header .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header .content h4 {
+    color: #FFF;
+    text-align: center;
+    font-family: 'kia-light';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    margin: 0 0 40px 0;
+    letter-spacing: 6px;
+}
+
+.header .content a {
+    color: #FFF;
+    font-family: 'kia-light';
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 20px 0 0 0;
+}
+
+.header .content a:hover {
+    color: #000000;
+    background-color: #fff;
+}
+
+.header{
+    overflow: hidden;
+}
+
+section{
+    overflow: hidden;
+}
+
+/* show intrest */
+
+.show-intrest {
+    margin: 60px 0 0 0;
+}
+
+.show-intrest .heading-box h2 {
+    color: var(--Color-Kia-Black, var(--color-black-solid, #000));
+    font-family: 'kia-bold';
+    font-size: var(--font-size-32, 32px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-48, 48px);
+    /* 150% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.show-intrest form .input-wrap input {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    padding: 12px 0 24px 0;
+    width: 100%;
+
+}
+
+
+
+.show-intrest form .input-wrap input::placeholder {
+    color: var(--color-kia-black-60, var(--color-black-60, rgba(0, 0, 0, 0.60)));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-21, 21px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.show-intrest form .input-wrap input:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.show-intrest form .input-wrap {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 46px 0;
+}
+
+.show-intrest form .input-wrap button {
+    padding: 8px 28px;
+    background: #05141F;
+
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+
+    font-family: "Kia-bold";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-21, 21px);
+    /* 150% */
+    letter-spacing: var(--letter-spacing-0_07, 0.07px);
+    border: none;
+    white-space: nowrap;
+}
+
+.show-intrest form .input-wrap.drop {
+    display: block;
+}
+
+.show-intrest form .input-wrap.drop p {
+    color: var(--color-kia-black-60, var(--color-black-60, rgba(0, 0, 0, 0.60)));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-21, 21px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.show-intrest form .input-wrap.drop select {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    padding: 12px 0 24px 0;
+    width: 100%;
+
+    color: var(--color-kia-black-60, var(--color-black-60, rgba(0, 0, 0, 0.60)));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-21, 21px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.show-intrest form .input-wrap.drop select option{
+    padding: 20px;
+    color: #05141F;
+}
+
+.show-intrest form .input-wrap.drop select option:hover{
+    background-color: red;
+}
+
+
+
+
+
+.show-intrest form .input-wrap.selection {
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+    margin: 0 0 16px 0;
+}
+
+.show-intrest form p{
+    color: var(--color-kia-black-60, var(--color-black-60, rgba(0, 0, 0, 0.60)));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-21, 21px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin: 0;
+    padding: 0 0 24px 0;
+}
+
+.show-intrest form .input-wrap.selection label{
+    color: var(--color-kia-black-60, var(--color-black-60, rgba(0, 0, 0, 0.60)));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-21, 21px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+
+.show-intrest form .selection-wrap{
+    margin: 0 0 20px 0;
+}
+
+
+.show-intrest form .input-wrap.selection input{
+    width: auto;
+}
+
+.show-intrest form .submit-btn {
+    padding: 20px 50px;
+    background: #05141F;
+
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+
+    font-family: "Kia-bold";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-21, 21px);
+    /* 150% */
+    letter-spacing: var(--letter-spacing-0_07, 0.07px);
+    border: none;
+    white-space: nowrap;
+}
+
+.show-intrest form .terms {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.show-intrest form .terms p,
+.show-intrest form .terms a {
+    color: var(--Color-Kia-Cod-Gray, var(--color-grey-7, #111));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-15, 15px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-22_5, 22.5px);
+    /* 150% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.show-intrest form input {
+    margin: 0 10px 0 0;
+}
+
+/* counter section */
+
+
+.counter-section {
+    margin: 60px 0 0 0;
+}
+
+.counter-section .left {
+    position: relative;
+}
+
+.counter-section .left img {
+    object-fit: cover;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 60%;
+    height: auto;
+}
+
+.counter-section .left img.hide {
+    opacity: 0;
+    /* Corrected selector */
+}
+
+
+.counter-section .right {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.counter-section .right .box h2 {
+    color: var(--color-black-solid, #000);
+    font-family: "Kia-regular";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.counter-section .right .box p {
+    color: var(--color-black-solid, #000);
+    font-family: 'kia-light';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+}
+
+/* emi section */
+
+
+.emi-section {
+    margin: 100px 0 0 0;
+}
+
+.emi-section .content-box {
+    margin: 0px 150px 0 150px;
+}
+
+.emi-section .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+    gap: 10px;
+}
+
+.emi-section .box.blue {
+    background-color: #05141F;
+}
+
+.emi-section .box.blue h6 {
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+    font-family: "Kia-bold";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-24, 24px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin: 0;
+}
+
+.emi-section .box.blue p {
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+    font-family: "Kia-regular";
+    font-size: var(--font-size-13, 13px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-19_5, 19.5px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin: 0;
+}
+
+.emi-section .box.white h6 {
+    color: var(--Color-Kia-Black, var(--color-black-solid, #000));
+    text-align: center;
+    font-family: "Kia-bold";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-24, 24px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.emi-section .box.white a {
+    color: #000;
+    font-family: 'kia-light';
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 10px 25px;
+    margin: 20px 0 0 0;
+}
+
+.emi-section .box.white a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.emi-section .box.white p {
+    color: var(--Color-Kia-Black, var(--color-black-solid, #000));
+    text-align: center;
+    font-family: "Kia-regular";
+
+    font-size: var(--font-size-13, 13px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-19_5, 19.5px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin: 0;
+}
+
+.emi-section .box.white h4 {
+    color: var(--Color-Kia-Black, var(--color-black-solid, #000));
+    text-align: center;
+    font-family: "Kia-regular";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-24, 24px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin: 0;
+}
+
+.emi-section .box.box.white {
+    padding: 0;
+}
+
+/* key-to-happiness */
+
+.key-to-happiness {
+    margin: 100px 0 0 0;
+}
+
+.key-to-happiness .heading-box h2 {
+    color: var(--color-black-solid, #000);
+    text-align: center;
+    font-family: "Kia-bold";
+    font-size: var(--font-size-32, 32px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-48, 48px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.key-to-happiness .content-box {
+    margin: 25px 0 0 0;
+}
+
+/* review */
+
+.review-section {
+    margin: 100px 0 0 0;
+}
+
+.review-section h3 {
+    color: #000000;
+    text-align: center;
+    font-family: 'kia-bold';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.review-section .box {
+    padding: 30px;
+
+    height: 100%;
+    border: 1px solid #000;
+
+}
+
+.review-section .swiper-slide {
+    height: auto;
+}
+
+.review-section h4 {
+    color: #000000;
+    text-align: center;
+    font-family: 'kia-regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    margin: 30px 0 20px 0;
+}
+
+.review-section a {
+    margin: 30px 0 0 0;
+
+    color: rgba(60, 60, 67, 0.50);
+    text-align: center;
+    font-family: 'kia-light';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 19.6px */
+}
+
+
+
+/* about */
+
+.about {
+    background: var(--color-black-solid, #000);
+    margin: 100px 0 0 0;
+    padding: 107px 80px;
+}
+
+.about .heading-box {
+    margin: 0 0 50px 0;
+}
+
+.about .heading-box h2 {
+    color: var(--color-white-solid, #FFF);
+    text-align: center;
+    font-family: "Kia-regular";
+    font-size: var(--opacity-50, 50px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 92px;
+    /* 143.75% */
+}
+
+
+.card {
+    border: none;
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.about .content-box h5 {
+    color: #959191;
+    font-family: "Kia-bold";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-64, 64px);
+    /* 400% */
+    letter-spacing: var(--letter-spacing-2_4, 2.4px);
+    text-transform: uppercase;
+}
+
+.about .content-box h3 {
+    color: var(--Color-Kia-Alto, var(--color-grey-85, #D9D9D9));
+    font-family: "Kia-bold";
+    font-size: var(--line-height-30, 30px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-37_5, 37.5px);
+    /* 125% */
+    letter-spacing: var(--letter-spacing--0_6, -0.6px);
+}
+
+.about .content-box p {
+    color: var(--Color-Kia-Alto, var(--color-grey-85, #D9D9D9));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-24, 24px);
+    /* 150% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    width: 74%;
+}
+
+.book-now-section{
+    padding: 100px 0 100px 0;
+}
+
+.book-now-section .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.book-now-section .box h4 {
+    color: #000;
+    text-align: center;
+    font-family: "Kia-bold";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-24, 24px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+
+.book-now-section .box p {
+    color: #000;
+    text-align: center;
+    font-family: "Kia-regular";
+    font-size: var(--font-size-13, 13px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-19_5, 19.5px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.faq {
+    background: #EFF1F2;
+    padding: 0 0 64px 0;
+}
+
+.faq .heading-box {
+    padding: 120px 0 40px 0;
+}
+
+.faq .heading-box h2 {
+    color: #000;
+    font-family: "Kia-bold";
+    font-size: var(--opacity-50, 50px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-55, 55px);
+    /* 110% */
+    letter-spacing: var(--letter-spacing--1, -1px);
+}
+
+.faq .accordion-item {
+    background: transparent;
+}
+
+
+.faq .accordion-button {
+    background: transparent;
+    padding: 30px 0;
+
+
+    color: #000;
+
+    font-family: "Kia-bold";
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-24, 24px);
+    /* 150% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.faq .accordion-button:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+
+}
+
+footer {
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+footer .box {
+    position: relative;
+}
+
+footer .box::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 60%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+footer .box.last::after {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+footer .box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    margin: 0;
+}
+
+footer .box a p {
+    margin: 0;
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.10);
+    font-family: "Kia-regular";
+    font-size: var(--font-size-15, 15px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-30, 30px);
+    /* 200% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.feature-section {
+    margin: 100px 0 0 0;
+    background-image: url('../images/feature-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.feature-section .heading-box {
+    text-align: center;
+}
+
+.feature-section .heading-box h2 {
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    font-style: normal;
+    font-family: "Kia-bold";
+    font-size: var(--opacity-50, 50px);
+
+}
+
+.feature-section .content-box {
+    margin: 60px 0 0 0;
+}
+
+.feature-section .content-box .nav {
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.feature-section .main-wrap .heading {
+    text-align: center;
+}
+
+.border-btn{
+    color: #FFF;
+    font-family: 'kia-light';
+    font-size: var(--font-size-26, 26px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 20px 0 0 0;
+}
+
+.border-btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+.feature-section .main-wrap .heading .btn-wrap{
+    margin: 30px 0 0 0;
+}
+.feature-section .main-wrap .heading a {
+    color: #FFF;
+    font-family: 'kia-light';
+    font-size: var(--font-size-26, 26px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.feature-section .main-wrap .heading a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.feature-section .main-wrap .heading h3 {
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    font-family: "Kia-bold";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-55, 55px);
+    /* 110% */
+    letter-spacing: var(--letter-spacing--1, -1px);
+    margin: 0 0 30px 0;
+}
+
+
+.feature-section .main-wrap .heading h6{
+    color: #FFF;
+    font-family: 'kia-bold';
+    font-size: var(--font-size-26, 26px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+}
+
+.feature-section .main-wrap .heading h5 {
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.10);
+    font-family: "Kia-regular";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-30, 30px);
+    /* 200% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.feature-section .main-wrap .heading h5 span{
+    font-family: 'kia-bold';
+    font-family: 'kia-bold';
+    background: #00000070;
+    padding: 10px 15px;
+    margin: 0 0 0 10px;
+
+}
+
+.feature-section .main-wrap .heading p {
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.10);
+    font-family: "Kia-regular";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-30, 30px);
+    /* 200% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin: 30px 0 0 0;
+}
+
+
+.feature-section .nav-pills .nav-link.active {
+    background-color: #fff !important;
+    color: #000000;
+    padding: 10px 20px;
+}
+
+
+.feature-section .nav-link {
+    background-color: #000000;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.feature-section .main-wrap .img-box {
+    text-align: center;
+}
+
+.feature-section .main-wrap {
+    margin: 40px 0 0 0;
+}
+
+.feature-section .swiper-slide {
+    height: auto;
+}
+
+.feature-section .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.feature-section .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-section .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* vivek */
+
+.feature-section .button-wrap .custom-next {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    right: -23px;
+    top: 50%;
+    z-index: 111;
+    padding: 9px;
+    border: 1px solid #fff;
+}
+
+.feature-section .button-wrap .custom-prev {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: -23px;
+    top: 50%;
+    z-index: 111;
+    padding: 9px;
+    border: 1px solid #fff;
+}
+
+.feature-section .button-wrap img {
+    max-width: 40px;
+}
+
+.feature-section .slider-wrap {
+    position: relative;
+}
+
+.feature-section .swiper {
+    position: static;
+}
+
+.feature-section .slider-wrap h3 {
+    text-align: center;
+
+    color: var(--Color-Kia-White, var(--color-white-solid, #FFF));
+    text-align: center;
+    text-shadow: 0px 1px 20px rgba(0, 0, 0, 0.10);
+    font-family: "Kia-bold";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-30, 30px);
+    /* 200% */
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.thank-you {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button {
+    position: fixed;
+    bottom: 50%;
+    right: 0px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+
+
+
+.custom-next {
+    background-color: rgb(255, 255, 255, .5);
+    position: absolute;
+    right: -2px;
+    top: 30%;
+    z-index: 111;
+    padding: 3px;
+
+
+}
+
+
+.custom-prev {
+    background-color: rgb(255, 255, 255, .5);
+    position: absolute;
+    left: -2px;
+    top: 30%;
+    z-index: 111;
+    padding: 3px;
+
+}
+
+.slider-wrap.box {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-box {
+    color: var(--color-black-solid, #000);
+    text-align: center;
+    font-family: "Kia-bold";
+    font-size: var(--font-size-32, 32px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-48, 48px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+
+
+.copy-right {
+    padding: 30px 0;
+    text-align: center;
+
+}
+
+.copy-right p{
+    text-decoration: none;
+    color: #dbdbdb;
+}
+
+a {
+    text-decoration: none;
+    color: #7f8285;
+    font-size: large;
+}
+
+legend {
+    color: var(--color-black-solid, #000);
+    font-family: kia-light;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2;
+
+}
+
+.btn2 a {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #fff;
+    ;
+    padding: 30px 60px;
+    margin-top: 100px;
+}
+
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.cta h2{
+    color: var(--Color-Kia-Black, var(--color-black-solid, #000));
+    font-family: 'kia-bold';
+    font-size: var(--font-size-32, 32px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-48, 48px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.cta .heading-box{
+    text-align: center;
+}
+
+.cta .content-box{
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.cta .content-box a{
+    color: #fff;
+    font-family: 'kia-light';
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+    padding: 16px 35px;
+    margin: 20px 0 0 0;
+    background: #000;
+}
+
+/* 16/01/25 */
+
+.enquire-popup{
+    background-color: rgba(0, 0, 0, 0.262);
+}
+
+.enquire-popup .modal-body{
+    padding: 30px; 
+    border-radius: 0;
+}
+
+.modal-content {
+    border: 1px solid #000;
+    border-radius: 0;
+}
+
+.enquire-popup .modal-body h1{
+    color: var(--Color-Kia-Black, var(--color-black-solid, #000));
+    font-family: 'kia-bold';
+    font-size: var(--font-size-32, 32px);
+    font-style: normal;
+    font-weight: var(--font-weight-600, 600);
+    line-height: var(--line-height-48, 48px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.enquire-popup .modal-body input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    margin: 0 0 20px 0;
+}
+
+.enquire-popup .modal-body select{
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    padding: 12px 0 24px 0;
+    width: 100%;
+    color: var(--color-kia-black-60, var(--color-black-60, rgba(0, 0, 0, 0.60)));
+    font-family: "Kia-regular";
+    font-size: var(--font-size-14, 14px);
+    font-style: normal;
+    font-weight: var(--font-weight-400, 400);
+    line-height: var(--line-height-21, 21px);
+    letter-spacing: var(--letter-spacing-0_16, 0.16px);
+}
+
+.enquire-popup .modal-body textarea{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    margin: 20px 0 20px 0;
+}
+
+.enquire-popup .modal-body input:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.enquire-popup .modal-body select:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+
+
+
+.enquire-popup .modal-body .button-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.enquire-popup .modal-body .button-wrap .close-btn{
+    border: 1px solid  #05141F;
+    padding: 8px 25px;
+    color: #05141F;
+    font-family: "Kia-regular";
+    background-color: #fff;
+}
+
+
+.enquire-popup .modal-body .button-wrap .submit-btn{
+    border: 1px solid  #05141F;
+    padding: 8px 25px;
+    background-color: #05141F;
+    color: #fff;
+    font-family: "Kia-regular";
+}
+
+#privacy h6{
+    font-family: "Kia-bold";
+    font-size: 24px;
+
+}
+
+#privacy p{
+    font-family: "Kia-regular";
+    font-size: 14px;
+}
+
+.social-media{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media img{
+    max-width: 50px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Followers Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .output h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Instagram Followers Comparison</h1>
+  <p>Click the button to fetch your Instagram data and compare.</p>
+
+  <button id="fetchData">Fetch and Compare</button>
+
+  <div class="output" id="output">
+    <!-- Results will appear here -->
+  </div>
+
+  <script>
+    const ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"; // Replace with your access token
+    const USER_ID = "_._aloshy_._"; // Replace with your Instagram user ID
+
+    async function fetchInstagramData() {
+      try {
+        const followersResponse = await fetch(
+          `https://graph.instagram.com/${USER_ID}/followers?fields=username&access_token=${ACCESS_TOKEN}`
+        );
+        const followersData = await followersResponse.json();
+
+        const requestedResponse = await fetch(
+          `https://graph.instagram.com/${USER_ID}/following?fields=username&access_token=${ACCESS_TOKEN}`
+        );
+        const requestedData = await requestedResponse.json();
+
+        if (followersData.error || requestedData.error) {
+          throw new Error("Error fetching data. Ensure your access token and permissions are correct.");
+        }
+
+        // Extract usernames
+        const followers = followersData.data.map(follower => follower.username);
+        const requested = requestedData.data.map(request => request.username);
+
+        // Compare the lists
+        const accepted = requested.filter(user => followers.includes(user));
+        const notAccepted = requested.filter(user => !followers.includes(user));
+
+        // Display results
+        document.getElementById("output").innerHTML = `
+          <h3>Results:</h3>
+          <p><strong>Users who accepted your request:</strong> ${accepted.length ? accepted.join(', ') : 'None'}</p>
+          <p><strong>Users who haven't accepted yet:</strong> ${notAccepted.length ? notAccepted.join(', ') : 'None'}</p>
+        `;
+      } catch (error) {
+        document.getElementById("output").innerHTML = `<p>Error: ${error.message}</p>`;
+      }
+    }
+
+    document.getElementById("fetchData").addEventListener("click", fetchInstagramData);
+  </script>
+</body>
+</html>
