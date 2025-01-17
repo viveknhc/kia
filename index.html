@@ -72,7 +72,7 @@
             <div class="heading-box">
                 <h2>Show Interest</h2>
             </div>
-            <form action="thank-you.html">
+            <form id="showIntrest">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="input-wrap">
@@ -1295,7 +1295,7 @@
 
                     <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">ENQUIRE</h1>
 
-                    <form action="">
+                    <form action="" id="enquire">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-wrap">
@@ -1391,6 +1391,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 
+    <script>
+        const form = document.getElementById('showIntrest');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = 'thank-you.html';
+        });
+    </script>
 
 </body>
 
